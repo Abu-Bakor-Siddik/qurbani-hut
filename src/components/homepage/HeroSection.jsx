@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const HeroSectionPage = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse p-20">
+    <div className="hero bg-base-200 min-h-[60vh]">
+      <div className="hero-content flex-col lg:flex-row-reverse p-20 md:p-10">
         <Image src={HeroCow} alt="Cow Image" height={300} width={300}></Image>
         <div>
           <h1 className="text-6xl font-bold">
@@ -27,7 +27,7 @@ const HeroSectionPage = () => {
             </Link>
             <button className="btn btn-outline px-8">Qurbani Tips</button>
           </div>
-          <div className="flex justify-around gap-5 mt-4">
+          <div className="flex  gap-10 mt-4">
             <div className="flex flex-col text-center">
               <h2 className="text-3xl font-bold text-primary">500+</h2>
               <p>Animals</p>
