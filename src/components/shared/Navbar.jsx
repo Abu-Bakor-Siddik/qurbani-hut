@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="navbar-start">
         <Link
           href="/"
-          className="text-2xl font-bold text-white flex items-center gap-2">
+          className="text-2xl font-bold text-black flex items-center gap-2">
           <Image src={cow} alt="logo" height={40} width={40}></Image>
           <span>
             Qurbani<span className="text-red-600">Hat</span>

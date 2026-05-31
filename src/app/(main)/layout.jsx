@@ -4,7 +4,7 @@ import React from 'react';
 
 const MainLayout = ({children}) => {
     return (
-        <div>
+        <div className='bg-white'>
             <Navbar></Navbar>
             {children}
             <Footer></Footer>
