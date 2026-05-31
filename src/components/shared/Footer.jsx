@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="bg-neutral text-neutral-content mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
+
           <div>
             <div className="text-2xl font-bold mb-4 flex items-center gap-2">
               <Image src={cow} alt="logo" height={40} width={40}></Image>
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+  
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
@@ -37,7 +37,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Categories */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Categories</h3>
             <ul className="space-y-2 text-sm">
@@ -49,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
