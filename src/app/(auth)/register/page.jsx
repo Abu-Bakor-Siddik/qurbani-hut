@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import Image from "next/image";
 import cow from "@/assets/Logo.png";
 import { CiImageOn } from "react-icons/ci";
+import { authClient } from "@/lib/auth-client";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -21,16 +22,30 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    if (data.password !== data.confirmPassword) {
-      toast.error("Passwords do not match");
-      return;
-    }
+ const onSubmit = async (data) => {
+  if (data.password !== data.confirmPassword) {
+    toast.error("Passwords do not match");
+    return;
+  }
 
-    console.log(data);
+  const { data: res, error } = await authClient.signUp.email({
+    name: data.name,
+    email: data.email,
+    password: data.password,
+    image: data.image,
+    callbackURL: "/login",
+  });
+
+  if (error) {
+    toast.error(error.message);
+    return;
+  }
+
+  if (res) {
     toast.success("Registration Successful!");
     reset();
-  };
+  }
+};
 
   return (
     <div className="card w-full max-w-md bg-base-100 shadow-2xl">

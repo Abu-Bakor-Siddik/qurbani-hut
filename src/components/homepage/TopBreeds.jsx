@@ -21,7 +21,7 @@ const TopBreeds = () => {
           .filter((a) => a.rating >= 4.5)
           .map((a) => {
             return (
-              <>
+              <div key={a.id}>
                 <div className="card bg-base-100 shadow-sm">
                   <figure>
                     <Image
@@ -42,7 +42,7 @@ const TopBreeds = () => {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
       </div>
