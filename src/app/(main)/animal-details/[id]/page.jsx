@@ -148,12 +148,20 @@ const AnimalDetailsPage = () => {
               )}
             </fieldset>
 
-            <textarea
-              placeholder="Message"
-              className="textarea textarea-bordered w-full"
-              rows={5}
-              {...register("message")}
-            />
+            <fieldset>
+              <legend>Address</legend>
+              <input
+                type="text"
+                placeholder="Enter Your Address"
+                className="input input-bordered w-full"
+                {...register("address", { required: "*Address is required" })}
+              />
+              {errors.address && (
+                <p className="text-error text-sm mt-1">
+                  {errors.address.message}
+                </p>
+              )}
+            </fieldset>
 
             <button type="submit" className="btn btn-primary ">
               Submit
