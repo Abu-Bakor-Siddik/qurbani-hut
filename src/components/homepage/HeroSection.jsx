@@ -25,7 +25,9 @@ const HeroSectionPage = () => {
                 Browse Animals <IoIosArrowRoundForward />
               </button>
             </Link>
+            <Link href={'#tips'}>
             <button className="btn btn-outline px-8">Qurbani Tips</button>
+            </Link>
           </div>
           <div className="flex  gap-10 mt-4">
             <div className="flex flex-col text-center">

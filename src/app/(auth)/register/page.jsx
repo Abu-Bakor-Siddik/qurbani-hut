@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FiUser, FiMail, FiLock } from "react-icons/fi";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Image from "next/image";
 import cow from "@/assets/Logo.png";
@@ -47,6 +47,13 @@ const RegisterPage = () => {
     router.push("/login");
   }
 };
+
+  const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+  };
 
   return (
     <div className="card w-full max-w-md bg-base-100 shadow-2xl">
@@ -204,6 +211,16 @@ const RegisterPage = () => {
             Create Account
           </button>
         </form>
+
+        <div className="divider">OR</div>
+
+        <button
+          type="button"
+          onClick={handleGoogleLogin}
+          className="btn btn-outline w-full gap-2 text-secondary">
+           <FaGoogle className=" text-secondary" />
+          Continue with Google
+        </button>
 
         <p className="text-center text-sm mt-4">
           Already have an account?{" "}

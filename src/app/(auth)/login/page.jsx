@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import cow from "@/assets/Logo.png";
 import Image from "next/image";
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 
@@ -39,6 +39,13 @@ const LoginPage = () => {
       reset();
       router.push("/");
     }
+  };
+
+    const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
   };
 
   return (
@@ -115,8 +122,18 @@ const LoginPage = () => {
           </button>
         </form>
 
+        <div className="divider">OR</div>
+
+        <button
+          type="button"
+          onClick={handleGoogleLogin}
+          className="btn btn-outline w-full gap-2 text-secondary">
+          <FaGoogle className=" text-secondary" />
+          Continue with Google
+        </button>
+
         <p className="text-center text-sm mt-4">
-          Don&apos;t have an account?{" "}
+          Don&apos;t have an account?
           <Link href="/register" className="text-red-500 font-semibold">
             Register
           </Link>
