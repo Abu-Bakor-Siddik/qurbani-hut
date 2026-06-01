@@ -9,11 +9,13 @@
     "age": 3,
     "rating": 4.5,
     "location": "Dhaka",
+    "seller": "Rahman Cattle Farm",
     "description": "Healthy and well-fed Sahiwal cow suitable for Qurbani.",
-    "image": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": "Large Animal"
+    "image": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?q=80&w=2670&auto=format&fit=crop",
+    "category": "Large Animal",
+    "features": ["Vaccinated", "Healthy", "Well-Fed", "Premium Breed"]
   },
-  { 
+  {
     "id": 2,
     "name": "Cholistani Bull",
     "type": "Cow",
@@ -23,9 +25,11 @@
     "age": 4,
     "rating": 4.2,
     "location": "Cumilla",
+    "seller": "Bismillah Agro Farm",
     "description": "Strong and sturdy Cholistani bull raised with proper care.",
-    "image": "https://images.unsplash.com/photo-1618080206739-14e8ac105472?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": "Large Animal"
+    "image": "https://images.unsplash.com/photo-1618080206739-14e8ac105472?q=80&w=1336&auto=format&fit=crop",
+    "category": "Large Animal",
+    "features": ["Strong Build", "Vaccinated", "Desert Breed", "Well-Maintained"]
   },
   {
     "id": 3,
@@ -37,9 +41,11 @@
     "age": 3,
     "rating": 4.8,
     "location": "Chandpur",
+    "seller": "Maa Livestock Center",
     "description": "Popular Red Sindhi cow with excellent health and nutrition.",
-    "image": "https://images.unsplash.com/photo-1595365691689-6b7b4e1970cf?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": "Large Animal"
+    "image": "https://images.unsplash.com/photo-1595365691689-6b7b4e1970cf?q=80&w=1365&auto=format&fit=crop",
+    "category": "Large Animal",
+    "features": ["High Rated", "Healthy", "Natural Feed", "Popular Breed"]
   },
   {
     "id": 4,
@@ -51,9 +57,11 @@
     "age": 2,
     "rating": 4.1,
     "location": "Faisalabad",
+    "seller": "Al-Amin Goat Farm",
     "description": "Premium Beetal goat known for its large size and quality meat.",
-    "image": "https://images.unsplash.com/photo-1524024973431-2ad916746881?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": "Small Animal"
+    "image": "https://images.unsplash.com/photo-1524024973431-2ad916746881?q=80&w=2670&auto=format&fit=crop",
+    "category": "Small Animal",
+    "features": ["Large Size", "Quality Meat", "Vaccinated", "Healthy"]
   },
   {
     "id": 5,
@@ -65,9 +73,11 @@
     "age": 1,
     "rating": 4.4,
     "location": "Gazipur",
+    "seller": "Green Valley Agro",
     "description": "Healthy and affordable goat suitable for individual Qurbani.",
-    "image": "https://plus.unsplash.com/premium_photo-1691030658378-acdaab929bed?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": "Small Animal"
+    "image": "https://plus.unsplash.com/premium_photo-1691030658378-acdaab929bed?q=80&w=1287&auto=format&fit=crop",
+    "category": "Small Animal",
+    "features": ["Affordable", "Healthy", "Vaccinated", "Good Choice"]
   },
   {
     "id": 6,
@@ -79,8 +89,10 @@
     "age": 2,
     "rating": 4.7,
     "location": "Feni",
+    "seller": "Noor Livestock Farm",
     "description": "Beautiful Kamori goat with distinctive appearance and excellent health.",
-    "image": "https://plus.unsplash.com/premium_photo-1691030657763-91078fbbdcf4?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "category": "Small Animal"
+    "image": "https://plus.unsplash.com/premium_photo-1691030657763-91078fbbdcf4?q=80&w=1287&auto=format&fit=crop",
+    "category": "Small Animal",
+    "features": ["Premium Breed", "Distinctive Look", "Healthy", "Well-Fed"]
   }
 ]
