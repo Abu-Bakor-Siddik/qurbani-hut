@@ -24,7 +24,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     await authClient.signOut();
     toast.error("Logged out from the account")
-    router.push("/login");
+    router.push("/");
   };
 
   return (

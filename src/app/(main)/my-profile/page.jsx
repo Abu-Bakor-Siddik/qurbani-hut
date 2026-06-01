@@ -1,47 +1,49 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
+import { authClient } from "@/lib/auth-client";
+import "animate.css";
 
 const MyProfilePage = () => {
- const user = {
-    name: "Shuvo",
-    email: "shuvo@gmail.com",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  };
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-base-200 flex items-center justify-center">
+        <span className="loading loading-spinner loading-lg" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-base-200 py-12">
       <div className="max-w-md mx-auto">
-
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl animate__animated animate__fadeInUp">
           <div className="card-body items-center text-center">
+            {user.image ? (
+              <Image
+                src={user.image}
+                alt={user.name}
+                height={100}
+                width={100}
+                className="w-28 h-28 rounded-full object-cover animate__animated animate__zoomIn"
+              />
+            ) : (
+              <div className="w-28 h-28 rounded-full bg-primary text-primary-content flex items-center justify-center text-4xl font-bold animate__animated animate__zoomIn">
+                {user.name?.charAt(0).toUpperCase()}
+              </div>
+            )}
 
-            <Image
-              src={user.image}
-              alt={user.name}
-              height={100}
-              width={100}
-              className="w-28 h-28 rounded-full object-cover"
-            />
+            <h2 className="text-2xl font-bold mt-4">{user.name}</h2>
+            <p className="text-gray-500">{user.email}</p>
 
-            <h2 className="text-2xl font-bold mt-4">
-              {user.name}
-            </h2>
-
-            <p className="text-gray-500">
-              {user.email}
-            </p>
-
-            <Link
-              href="/update-profile"
-              className="btn btn-primary mt-5"
-            >
+            <Link href="/update-profile" className="btn btn-primary mt-5">
               Update Information
             </Link>
-
           </div>
         </div>
-
       </div>
     </div>
   );
