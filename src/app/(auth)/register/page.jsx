@@ -10,10 +10,12 @@ import Image from "next/image";
 import cow from "@/assets/Logo.png";
 import { CiImageOn } from "react-icons/ci";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -33,7 +35,6 @@ const RegisterPage = () => {
     email: data.email,
     password: data.password,
     image: data.image,
-    callbackURL: "/login",
   });
 
   if (error) {
@@ -43,7 +44,7 @@ const RegisterPage = () => {
 
   if (res) {
     toast.success("Registration Successful!");
-    reset();
+    router.push("/login");
   }
 };
 

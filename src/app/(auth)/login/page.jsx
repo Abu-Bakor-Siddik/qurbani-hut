@@ -8,8 +8,13 @@ import cow from "@/assets/Logo.png";
 import Image from "next/image";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
+  const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -17,14 +22,24 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const { data: res, error } = await authClient.signIn.email({
+      email: data.email,
+      password: data.password,
+      rememberMe: true,
+    });
 
-    toast.success("Login Successful!");
-    reset();
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
+
+    if (res) {
+      toast.success("Login Successful!");
+      reset();
+      router.push("/");
+    }
   };
-
-  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="card w-full max-w-md bg-base-100 shadow-2xl">
