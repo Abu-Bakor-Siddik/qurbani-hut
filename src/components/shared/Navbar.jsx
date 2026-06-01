@@ -1,17 +1,20 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FiGrid, FiHome, FiLogOut, FiMenu, FiUser, FiX } from "react-icons/fi";
 import cow from "@/assets/Logo.png";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Home", icon: <FiHome /> },
     { href: "/all-animal", label: "All Animals", icon: <FiGrid /> },
+    { href: "/my-profile", label: "My Profile", icon: <FiUser /> },
   ];
 
   return (
@@ -33,7 +36,11 @@ const Navbar = () => {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="flex items-center gap-2 font-medium hover:text-primary">
+                className={`flex items-center gap-2 font-medium ${
+                  pathname === link.href
+                    ? "text-primary font-bold"
+                    : "hover:text-primary"
+                }`}>
                 {link.icon}
                 {link.label}
               </Link>
@@ -81,30 +88,22 @@ const Navbar = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="flex items-center gap-2"
-                  onClick={() => setIsOpen(false)}>
+                  onClick={() => setIsOpen(false)}
+                  className={`flex items-center gap-2 ${
+                    pathname === link.href ? "text-primary font-bold" : ""
+                  }`}>
                   {link.icon}
                   {link.label}
                 </Link>
               </li>
             ))}
-          
-              <>
-                <li>
-                  <Link
-                    href="/my-profile"
-                    className="flex items-center gap-2"
-                    onClick={() => setIsOpen(false)}>
-                    <FiUser /> My Profile
-                  </Link>
-                </li>
-                <li>
-                  <button
-                    className="flex items-center gap-2 text-error">
-                    <FiLogOut /> Sign Out
-                  </button>
-                </li>
-              </>
+            <>
+              <li>
+                <button className="flex items-center gap-2 text-error">
+                  <FiLogOut /> Sign Out
+                </button>
+              </li>
+            </>
           </ul>
         </div>
       )}

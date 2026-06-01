@@ -16,7 +16,7 @@ const TopBreeds = () => {
           customers.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-30">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-30 mb-20">
         {animal
           .filter((a) => a.rating >= 4.5)
           .map((a) => {
