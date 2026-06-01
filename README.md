@@ -1,7 +1,7 @@
 QurbaniHat
 - A modern livestock marketplace where users can explore and book animals for Qurbani .Including cows, goats and more. Built with Next.js 16, Better Auth, and MongoDB.
 
-Live URL :- 
+Live URL :- https://qurbani-hut-henna.vercel.app/
 
 Purpose
 - QurbaniHat simplifies the process of finding and booking quality Qurbani livestock online. Users can browse animals by category, sort by price, view full details, and place a booking .All from the comfort of their home.
