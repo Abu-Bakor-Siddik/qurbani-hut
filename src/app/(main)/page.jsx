@@ -1,7 +1,7 @@
 import FeatureAnimalPage from "@/components/homepage/FeatureAnimal";
 import HeroSectionPage from "@/components/homepage/HeroSection";
+import QurbaniTips from "@/components/homepage/QurbaniTips";
 import MarqueItemsPage from "@/components/shared/MarqueItems";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <HeroSectionPage ></HeroSectionPage>
       <MarqueItemsPage></MarqueItemsPage>
       <FeatureAnimalPage></FeatureAnimalPage>
+      <QurbaniTips></QurbaniTips>
     </div>
   );
 }

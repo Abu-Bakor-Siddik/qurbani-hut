@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Choose the Right Animal",
+    "description": "Select an animal that is healthy, free from defects, and meets the age requirements as per Islamic guidelines.",
+    "icon": "https://i.ibb.co.com/F2vpLVX/paws.png"
+  },
+  {
+    "id": 2,
+    "title": "Verify Health Records",
+    "description": "Always ask for vaccination records and health certificates.",
+    "icon": "https://i.ibb.co.com/bjPLC6rL/hospital.png"
+  },
+  {
+    "id": 3,
+    "title": "Check Age Requirements",
+    "description": "Ensure the animal meets the required age for Qurbani.",
+    "icon": "https://i.ibb.co.com/Mk2pGybg/calendar.png"
+  },
+  {
+    "id": 4,
+    "title": "Book Early for Best Selection",
+    "description": "Book your Qurbani animal early to get the best selection.",
+    "icon": "https://i.ibb.co.com/ZRGrX54L/time.png"
+  },
+  {
+    "id": 5,
+    "title": "Proper Distribution",
+    "description": "Divide the meat among family, relatives, and the needy.",
+    "icon": "https://i.ibb.co.com/mVgJ76nf/handshake.png"
+  },
+  {
+    "id": 6,
+    "title": "Timely Sacrifice",
+    "description": "Perform the sacrifice during the prescribed Eid days.",
+    "icon": "https://i.ibb.co.com/PG687p3B/nabawi-mosque.png"
+  }
+]
