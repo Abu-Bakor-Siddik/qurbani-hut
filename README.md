@@ -29,3 +29,5 @@ Acknowledgements
 1. BetterAuth - Authentication
 2. DaisyUI - UI Components
 3. Unsplash - Animal Images
+4. Flaticon - Icons
+5. ImgBB - Image Hosting

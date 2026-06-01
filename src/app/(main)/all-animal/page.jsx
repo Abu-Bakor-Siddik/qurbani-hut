@@ -74,10 +74,10 @@ const [selectedCategory, setSelectedCategory] = useState('All');
               Sort By Price
             </option>
             <option value="low-high">
-              Low → High
+              Low to High
             </option>
             <option value="high-low">
-              High → Low
+              High to Low
             </option>
           </select>
         </div>
