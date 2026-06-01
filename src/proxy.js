@@ -1,13 +1,18 @@
 import { NextResponse } from "next/server";
-import { auth } from "./lib/auth";
-import { headers } from "next/headers";
 
 export async function proxy(request) {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  const sessionRes = await fetch(
+    `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/get-session`,
+    {
+      headers: {
+        cookie: request.headers.get("cookie") || "",
+      },
+    }
+  );
 
-  if (session) {
+  const session = await sessionRes.json();
+
+  if (session?.user) {
     return NextResponse.next();
   }
 
