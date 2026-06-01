@@ -7,7 +7,7 @@ import AnimalCard from "../shared/AnimalCard";
 const FeatureAnimalPage = () => {
       const featured = animal.slice(0,4)
   return (
-    <section className="py-16 bg-base-200">
+    <section className="py-16 ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">

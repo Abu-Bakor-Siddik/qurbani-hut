@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const HeroSectionPage = () => {
   return (
-    <div className="hero bg-base-200 min-h-[60vh]">
+    <div className="hero  min-h-[60vh]">
       <div className="hero-content flex-col lg:flex-row-reverse p-20 md:p-10">
         <Image src={HeroCow} alt="Cow Image" height={300} width={300}></Image>
         <div>

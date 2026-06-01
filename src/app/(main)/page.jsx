@@ -1,6 +1,7 @@
 import FeatureAnimalPage from "@/components/homepage/FeatureAnimal";
 import HeroSectionPage from "@/components/homepage/HeroSection";
 import QurbaniTips from "@/components/homepage/QurbaniTips";
+import TopBreeds from "@/components/homepage/TopBreeds";
 import MarqueItemsPage from "@/components/shared/MarqueItems";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <MarqueItemsPage></MarqueItemsPage>
       <FeatureAnimalPage></FeatureAnimalPage>
       <QurbaniTips></QurbaniTips>
+      <TopBreeds></TopBreeds>
     </div>
   );
 }
